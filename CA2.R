@@ -21,6 +21,7 @@ colnames(NI_Postcode) <- c("Organisation Name","Sub-Building Name", "Building Na
 
 
 # pasting colums together; tidying up dataframe
+#created a new dataframe for this
 NI_Pcode <- NI_Postcode
 NI_Pcode$`Secondary Thorfare` <- paste(NI_Pcode$`Alt Thorfare`, NI_Pcode$`Secondary Thorfare`)
 
@@ -88,5 +89,3 @@ limavady <- subset(NI_Pcode,  Town == "LIMAVADY", select =`Locality`:`Town`)
 
 
 write.csv(limavady, 'C:\\Users\\Richard\\Documents\\CA2-Crime-Data\\CleanNIPostcodeData.csv', row.names = FALSE)
-
-
