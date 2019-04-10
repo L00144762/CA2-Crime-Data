@@ -83,10 +83,10 @@ levels(NI_Pcode$County)
 
 # making limavady dataset
 limavady <- subset(NI_Pcode,  Town == "LIMAVADY", select =`Locality`:`Town`)
-limavady$Locality <- ifelse(is.na(limavady$Locality), limavady$Townland, limavady$Locality)
 
-limavady$Locality <- as.factor(limavady$Locality)
-str(limavady)
-write.csv(limavady, 'C:\\Users\\Richard\\Desktop\\data_science\\CleanNIPostcodeData.csv', row.names = FALSE)
+#limavady$Locality <- ifelse(is.na(limavady$Locality), limavady$Townland, limavady$Locality)
+
+
+write.csv(limavady, 'C:\\Users\\Richard\\Documents\\CA2-Crime-Data\\CleanNIPostcodeData.csv', row.names = FALSE)
 
 
